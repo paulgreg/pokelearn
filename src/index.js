@@ -1,7 +1,7 @@
 let pokedex = require('../Pokemon-DB/pokedex.json')
 
 function getImgName(name) {
-    return name.replace('♀', '').replace('♂', '').replace('. ', '_').replace(' ', '_').replace('Jr.', 'Jr')
+    return name.replace('♀', '').replace('♂', '').replace(/é/g, 'e').replace('. ', '_').replace(' ', '_').replace('Jr.', 'Jr')
 }
 
 let ul = document.createElement('ul')
