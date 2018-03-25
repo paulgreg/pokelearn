@@ -9,7 +9,12 @@ self.addEventListener('activate', evt => {
 });
 
 self.addEventListener('fetch', evt => {
-  evt.respondWith(fromNetwork(evt.request, 500).catch(() => {
+  if (/\.png/.test(evt.request.url)) {
+    return evt.respondWith(fromCache(evt.request).catch(() => {
+      return fromNetwork(evt.request, 5000)
+    }))
+  }
+  return evt.respondWith(fromNetwork(evt.request, 500).catch(() => {
     return fromCache(evt.request)
   }))
 })
