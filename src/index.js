@@ -1,12 +1,17 @@
 var pokedex = require('../Pokemon-DB/pokedex.json')
 
-var ol = document.createElement('ol')
+function removeGender (name) {
+    return name.replace('♀', '').replace('♂', '')
+}
+
+var ul = document.createElement('ul')
 
 pokedex.map(pokemon => {
     var li = document.createElement('li')
-    li.innerHTML = `<img src="../../Pokemon-DB/img/${pokemon.id}${pokemon.ename}.png"><h2>${pokemon.ename}</h2>`
-    ol.appendChild(li)
+    //console.log(pokemon)
+    li.innerHTML = `<img src="../../Pokemon-DB/img/${pokemon.id}${removeGender(pokemon.ename)}.png"><h2>${pokemon.id} ${pokemon.ename}</h2><p>${JSON.stringify(pokemon.base)}</p>`
+    ul.appendChild(li)
 })
 
-document.body.appendChild(ol)
+document.body.appendChild(ul)
 

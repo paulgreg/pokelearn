@@ -4,12 +4,20 @@
         <title>Pokedex</title>
         <style>
             body { font-family: sans-serif; }
-            ol { display: flex; flex-wrap: wrap; }
-            li { border: 1px solid black; }
-            h2 { }
+            ul { display: flex; flex-wrap: wrap; list-style: none; }
+            li { background-color: #eeFFee; margin: 1em; width: 500px; text-align: center; border: 1px solid green;}
         </style>
     </head>
     <body>
         <h1>Pokemons</h1>
     </body>
+    <script defer="defer">
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('./service-worker.js').then(function() {
+                console.log('service worker registration complete');
+            }, function(e) {
+                console.log('service worker registration failure:', e);
+            });
+        }
+    </script>
 </html>
