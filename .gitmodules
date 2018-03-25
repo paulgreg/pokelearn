@@ -1,0 +1,3 @@
+[submodule "Pokemon-DB"]
+	path = Pokemon-DB
+	url = git@github.com:fanzeyi/Pokemon-DB.git
