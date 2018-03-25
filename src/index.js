@@ -9,7 +9,7 @@ let ul = document.createElement('ul')
 pokedex.map((pokemon, idx) => {
     let li = document.createElement('li')
     //console.log(pokemon)
-    li.innerHTML = `<img ${idx < 10 ? '' : 'data-'}src="../../Pokemon-DB/img/${pokemon.id}${getImgName(pokemon.ename)}.png"><h2>${pokemon.id} ${pokemon.ename}</h2><p>${JSON.stringify(pokemon.base)}</p>`
+    li.innerHTML = `<img ${idx < 10 ? '' : 'data-'}src="./Pokemon-DB/img/${pokemon.id}${getImgName(pokemon.ename)}.png"><h2>${pokemon.id} ${pokemon.ename}</h2><p>${JSON.stringify(pokemon.base)}</p>`
     ul.appendChild(li)
 })
 
