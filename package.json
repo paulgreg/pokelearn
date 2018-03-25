@@ -17,6 +17,7 @@
     "babel-preset-env": "^1.6.1",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.1.0",
+    "lazyload": "^2.0.0-beta.2",
     "webpack": "^4.2.0",
     "webpack-cli": "^2.0.13",
     "webpack-dev-server": "^3.1.1"

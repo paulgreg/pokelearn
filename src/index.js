@@ -15,3 +15,6 @@ pokedex.map(pokemon => {
 
 document.body.appendChild(ul)
 
+// Lazy load images
+let lazyload = require('lazyload')
+let lazy = new lazyload(document.querySelectorAll('[data-src]'))
